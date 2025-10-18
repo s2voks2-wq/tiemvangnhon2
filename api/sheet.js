@@ -10,7 +10,6 @@ export default async function handler(req, res) {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
 
-    // Cho phép mọi thiết bị truy cập (TV, điện thoại, trình duyệt)
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
